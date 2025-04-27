@@ -29,7 +29,7 @@ function Index() {
       setIdentifier("");
       setPassword("");
       alert("Logged in successfully");
-      router.replace("/dashboard");
+      router.replace("/todos");
     } else if (res.status === 404) {
       alert("user is not found");
     } else if (res.status === 422) {
