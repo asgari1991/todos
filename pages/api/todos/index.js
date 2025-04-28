@@ -15,7 +15,7 @@ const handler = async (req, res) => {
   }
 
   const user = await userModel.findOne({ email: tokenPayload.email });
-  if (req.method !== "GET") {
+  if (req.method === "GET") {
     const todos=await todoModel.find({user:user._id})
     return res.json(todos)
   } else if (req.method === "POST") {

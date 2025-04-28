@@ -1,5 +1,5 @@
 const { default: mongoose } = require("mongoose");
-import model from "./User";
+import userModel from "./User";
 const schema = mongoose.Schema({
     title:{
         type:String,
